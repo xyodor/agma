@@ -1,0 +1,31 @@
+@media only screen and (max-width: 900px) {
+    main > div.container {
+        width: 100%;
+        position: static;
+        transform: none;
+    }
+
+    main > div.container > div.row > input#url {
+        float: none;
+        width: 100%;
+        background-color: #fff;
+    }
+    main > div.container > div.row > button#search {
+        float: none;
+        width: 100%;
+        display: block;
+        margin: 5px auto 0 auto;
+    }
+
+    main > div.container > div.row > div.image > img#imageElement {
+        width: 100%;
+    }
+
+    main > div.container > div.row > div#message {
+        padding: 5px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-radius: 0;
+        font-size: 11px;
+        color: #666;
+    }
+}
