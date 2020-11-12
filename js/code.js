@@ -40,11 +40,16 @@ main.in_button.addEventListener("click", () => {
             .then(res => {
                 return res.json();
             }).then(data => {
-                img = data['graphql']['user']['profile_pic_url_hd'];
+                img = data['graphql'];
                 if (img !== undefined) {
-                    showimg(img);
+                    img = img['user']['profile_pic_url_hd'];
+                    if (img !== undefined) {
+                        showimg(img)
+                    }else {
+                        showmessage("عذرا حدث خطأ")
+                    }
                 }else {
-                    showmessage("عذرا لم يتم إيجاد الصورة");
+                    showmessage("يبدوا أن العضو الذي تبحث عنه غير موجود");
                 }
             }).catch(error => {
                 console.log(error);
